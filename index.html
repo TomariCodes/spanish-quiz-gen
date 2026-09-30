@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spanish Quiz Generator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="bg-light p-5 mb-4 text-center">
+        <h1>Spanish Quiz Generator</h1>
+        <p>Generate quizzes to practice your Spanish skills!</p>
+    </header>
+    <main>
+        <div class="container mt-4">
+
+            <form>
+                <div class="mb-3">
+                    <label for="numQuestions" class="form-label">Number of Questions</label>
+                <input type="number" class="form-control" id="numQuestions" name="numQuestions" min="1" max="50" required>
+            </div>
+            <div class="mb-3">
+                <label for="difficulty" class="form-label">Difficulty</label>
+                <select class="form-select" id="difficulty" name="difficulty" required>
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="category" class="form-label">Category</label>
+                <select class="form-select" id="category" name="category" required>
+                    <option value="vocabulary">Vocabulary</option>
+                    <option value="grammar">Grammar</option>
+                    <option value="conversation">Conversation</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Generate Quiz</button>
+        </form>
+
+        <div class="row mt-md-5 d-flex justify-content-center">
+            <fieldset class="m-1 col-md-3 text-center">
+                <label>Vocabulary</label>
+            <div>
+                <ul id="vocabulary"></ul>
+            </div>
+        </fieldset>
+        <fieldset class="m-1 col-md-3 text-center">
+            <label>Grammar</label>
+            <div>
+                <ul id="grammar"></ul>
+            </div>
+        </fieldset>
+        <fieldset class="m-1 col-md-3 text-center">
+            <label>Conversation</label>
+            <div>
+                <ul id="conversation"></ul>
+            </div>
+        </fieldset>
+    </div>
+    </div>
+    </main>
+</body>
+</html>
